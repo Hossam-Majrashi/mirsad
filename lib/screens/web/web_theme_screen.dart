@@ -1,0 +1,202 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../core/services/app_settings_service.dart';
+import '../../core/theme/app_theme.dart';
+import '../../l10n/generated/app_localizations.dart';
+import 'web_home_screen.dart';
+
+class WebThemeScreen extends StatelessWidget {
+  final bool isOnboarding;
+
+  const WebThemeScreen({super.key, this.isOnboarding = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final currentTheme = context.watch<AppSettingsService>().themeMode;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(l10n.selectTheme),
+        leading: const BackButton(),
+      ),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 860),
+          child: Padding(
+            padding: const EdgeInsets.all(32),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  l10n.chooseThemeSubtitle,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: isDark ? Colors.grey[400] : Colors.grey[600],
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Wrap(
+                  spacing: 16,
+                  runSpacing: 16,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    _buildThemeCard(
+                      context,
+                      title: l10n.themeDark,
+                      subtitle: l10n.themeDarkSubtitle,
+                      isSelected: currentTheme == ThemeMode.dark,
+                      backgroundColor: AppTheme.darkBackground,
+                      cardColor: AppTheme.darkCard,
+                      iconColor: const Color(0xFF00BFA5),
+                      textColor: Colors.white,
+                      onTap: () => AppSettingsService.instance.setThemeMode(ThemeMode.dark),
+                    ),
+                    _buildThemeCard(
+                      context,
+                      title: l10n.themeLight,
+                      subtitle: l10n.themeLightSubtitle,
+                      isSelected: currentTheme == ThemeMode.light,
+                      backgroundColor: AppTheme.lightBackground,
+                      cardColor: AppTheme.lightCard,
+                      iconColor: const Color(0xFF0F766E),
+                      textColor: const Color(0xFF0F172A),
+                      onTap: () => AppSettingsService.instance.setThemeMode(ThemeMode.light),
+                    ),
+                    _buildThemeCard(
+                      context,
+                      title: l10n.themeSystem,
+                      subtitle: l10n.themeSystemSubtitle,
+                      isSelected: currentTheme == ThemeMode.system,
+                      backgroundColor: isDark ? AppTheme.darkBackground : AppTheme.lightBackground,
+                      cardColor: isDark ? AppTheme.darkCard : AppTheme.lightCard,
+                      iconColor: AppTheme.accentTeal,
+                      textColor: isDark ? Colors.white : Colors.black,
+                      onTap: () => AppSettingsService.instance.setThemeMode(ThemeMode.system),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 40),
+                SizedBox(
+                  width: 240,
+                  height: 48,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppTheme.accentTeal,
+                      foregroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                    onPressed: () async {
+                      if (isOnboarding) {
+                        await AppSettingsService.instance.completeOnboarding();
+                        if (context.mounted) {
+                          Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(builder: (_) => const WebHomeScreen()),
+                            (route) => false,
+                          );
+                        }
+                      } else {
+                        Navigator.of(context).pop();
+                      }
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          isOnboarding ? l10n.splashGetStarted : l10n.btnDone,
+                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(width: 8),
+                        const Icon(Icons.arrow_forward_rounded, size: 20),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildThemeCard(
+    BuildContext context, {
+    required String title,
+    required String subtitle,
+    required bool isSelected,
+    required Color backgroundColor,
+    required Color cardColor,
+    required Color iconColor,
+    required Color textColor,
+    required VoidCallback onTap,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        width: 240,
+        constraints: const BoxConstraints(minHeight: 190),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+        decoration: BoxDecoration(
+          color: cardColor,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: isSelected ? AppTheme.accentTeal : Colors.grey.withOpacity(0.25),
+            width: isSelected ? 2 : 1,
+          ),
+          boxShadow: [
+            if (isSelected)
+              BoxShadow(
+                color: AppTheme.accentTeal.withOpacity(0.15),
+                blurRadius: 14,
+                offset: const Offset(0, 4),
+              ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: backgroundColor,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.grey.withOpacity(0.3)),
+              ),
+              child: Icon(Icons.palette_rounded, color: iconColor, size: 24),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: textColor,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 12,
+                color: textColor.withOpacity(0.7),
+              ),
+            ),
+            const SizedBox(height: 6),
+            SizedBox(
+              height: 22,
+              child: isSelected
+                  ? const Icon(Icons.check_circle_rounded, color: AppTheme.accentTeal, size: 18)
+                  : const SizedBox.shrink(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Mirsad
+Name[ar]=مرصاد
+Comment=Multi-Engine File Security Scanner
+Comment[ar]=فاحص أمان الملفات متعدد المحركات
+Exec=mirsad %U
+Icon=com.h.mirsad
+Terminal=false
+Type=Application
+Categories=Utility;Security;System;
+MimeType=application/octet-stream;
+Actions=ScanFile;
+
+[Desktop Action ScanFile]
+Name=Scan with Mirsad
+Name[ar]=فحص بواسطة مرصاد
+Exec=mirsad %f
+Icon=com.h.mirsad

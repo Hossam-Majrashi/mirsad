@@ -1,0 +1,373 @@
+# Full Language Support — Coding Agent Instructions
+
+## Task
+Add complete, full localization/i18n support for the following languages to this program/game/app.
+
+## Language Data (source of truth)
+
+static const List<AppLanguage> supportedLanguages = [
+```dart
+static const List<AppLanguage> supportedLanguages = [
+// 1
+AppLanguage(
+  nativeLanguageName: 'Arabic',
+  code: 'ar',
+  isRtl: true,
+),
+
+// 2
+AppLanguage(
+  nativeLanguageName: 'English',
+  code: 'en',
+  isRtl: false,
+),
+
+// 3
+AppLanguage(
+  nativeLanguageName: 'Urdu',
+  code: 'ur',
+  isRtl: true,
+),
+
+// 4
+AppLanguage(
+  nativeLanguageName: 'Indonesian',
+  code: 'id',
+  isRtl: false,
+),
+
+// 5
+AppLanguage(
+  nativeLanguageName: 'Bengali',
+  code: 'bn',
+  isRtl: false,
+),
+
+// 6
+AppLanguage(
+  nativeLanguageName: 'Turkish',
+  code: 'tr',
+  isRtl: false,
+),
+
+// 7
+AppLanguage(
+  nativeLanguageName: 'Persian',
+  code: 'fa',
+  isRtl: true,
+),
+
+// 8
+AppLanguage(
+  nativeLanguageName: 'Malay',
+  code: 'ms',
+  isRtl: false,
+),
+
+// 9
+AppLanguage(
+  nativeLanguageName: 'Pashto',
+  code: 'ps',
+  isRtl: true,
+),
+
+// 10
+AppLanguage(
+  nativeLanguageName: 'Punjabi',
+  code: 'pa',
+  isRtl: false,
+),
+
+// 11
+AppLanguage(
+  nativeLanguageName: 'Sindhi',
+  code: 'sd',
+  isRtl: true,
+),
+
+// 12
+AppLanguage(
+  nativeLanguageName: 'Hindi',
+  code: 'hi',
+  isRtl: false,
+),
+
+// 13
+AppLanguage(
+  nativeLanguageName: 'Malayalam',
+  code: 'ml',
+  isRtl: false,
+),
+
+// 14
+AppLanguage(
+  nativeLanguageName: 'Tamil',
+  code: 'ta',
+  isRtl: false,
+),
+
+// 15
+AppLanguage(
+  nativeLanguageName: 'Telugu',
+  code: 'te',
+  isRtl: false,
+),
+
+// 16
+AppLanguage(
+  nativeLanguageName: 'Somali',
+  code: 'so',
+  isRtl: false,
+),
+
+// 17
+AppLanguage(
+  nativeLanguageName: 'Hausa',
+  code: 'ha',
+  isRtl: false,
+),
+
+// 18
+AppLanguage(
+  nativeLanguageName: 'Swahili',
+  code: 'sw',
+  isRtl: false,
+),
+
+// 19
+AppLanguage(
+  nativeLanguageName: 'Azerbaijani',
+  code: 'az',
+  isRtl: false,
+),
+
+// 20
+AppLanguage(
+  nativeLanguageName: 'Uzbek',
+  code: 'uz',
+  isRtl: false,
+),
+
+// 21
+AppLanguage(
+  nativeLanguageName: 'Kazakh',
+  code: 'kk',
+  isRtl: false,
+),
+
+// 22
+AppLanguage(
+  nativeLanguageName: 'Kyrgyz',
+  code: 'ky',
+  isRtl: false,
+),
+
+// 23
+AppLanguage(
+  nativeLanguageName: 'Bosnian',
+  code: 'bs',
+  isRtl: false,
+),
+
+// 24
+AppLanguage(
+  nativeLanguageName: 'French',
+  code: 'fr',
+  isRtl: false,
+),
+
+// 25
+AppLanguage(
+  nativeLanguageName: 'Russian',
+  code: 'ru',
+  isRtl: false,
+),
+
+// 26
+AppLanguage(
+  nativeLanguageName: 'German',
+  code: 'de',
+  isRtl: false,
+),
+
+// 27
+AppLanguage(
+  nativeLanguageName: 'Spanish',
+  code: 'es',
+  isRtl: false,
+),
+
+// 28
+AppLanguage(
+  nativeLanguageName: 'Italian',
+  code: 'it',
+  isRtl: false,
+),
+
+// 29
+AppLanguage(
+  nativeLanguageName: 'Portuguese',
+  code: 'pt',
+  isRtl: false,
+),
+
+// 30
+AppLanguage(
+  nativeLanguageName: 'Chinese (Simplified)',
+  code: 'zh',
+  isRtl: false,
+),
+
+// 31
+AppLanguage(
+  nativeLanguageName: 'Chinese (Traditional)',
+  code: 'zh-TW',
+  isRtl: false,
+),
+
+// 32
+AppLanguage(
+  nativeLanguageName: 'Japanese',
+  code: 'ja',
+  isRtl: false,
+),
+
+// 33
+AppLanguage(
+  nativeLanguageName: 'Korean',
+  code: 'ko',
+  isRtl: false,
+),
+
+// 34
+AppLanguage(
+  nativeLanguageName: 'Kurdish',
+  code: 'ku',
+  isRtl: true,
+),
+
+// 35
+AppLanguage(
+  nativeLanguageName: 'Gujarati',
+  code: 'gu',
+  isRtl: false,
+),
+
+// 36
+AppLanguage(
+  nativeLanguageName: 'Marathi',
+  code: 'mr',
+  isRtl: false,
+),
+
+// 37
+AppLanguage(
+  nativeLanguageName: 'Dutch',
+  code: 'nl',
+  isRtl: false,
+),
+
+// 38
+AppLanguage(
+  nativeLanguageName: 'Polish',
+  code: 'pl',
+  isRtl: false,
+),
+
+// 39
+AppLanguage(
+  nativeLanguageName: 'Romanian',
+  code: 'ro',
+  isRtl: false,
+),
+
+// 40
+AppLanguage(
+  nativeLanguageName: 'Greek',
+  code: 'el',
+  isRtl: false,
+),
+
+// 41
+AppLanguage(
+  nativeLanguageName: 'Amharic',
+  code: 'am',
+  isRtl: false,
+),
+
+// 42
+AppLanguage(
+  nativeLanguageName: 'Nepali',
+  code: 'ne',
+  isRtl: false,
+),
+
+// 43
+AppLanguage(
+  nativeLanguageName: 'Yoruba',
+  code: 'yo',
+  isRtl: false,
+),
+
+// 44
+AppLanguage(
+  nativeLanguageName: 'Filipino',
+  code: 'fil',
+  isRtl: false,
+),
+
+// 45
+AppLanguage(
+  nativeLanguageName: 'Burmese',
+  code: 'my',
+  isRtl: false,
+),
+
+// 46
+AppLanguage(
+  nativeLanguageName: 'Vietnamese',
+  code: 'vi',
+  isRtl: false,
+),
+
+// 47
+AppLanguage(
+  nativeLanguageName: 'Thai',
+  code: 'th',
+  isRtl: false,
+),
+
+// 48
+AppLanguage(
+  nativeLanguageName: 'Ukrainian',
+  code: 'uk',
+  isRtl: false,
+// 49
+AppLanguage(
+  nativeLanguageName: 'Nigerian Pidgin',
+  code: 'pcm',
+  isRtl: false,
+),
+),
+];
+
+
+
+## Requirements
+
+- Use `code` as the language code for locale resolution.
+- Display each language using the name shown in `nativeLanguageName`.
+- Arabic is the first language and English is the second language.
+- Country-specific language variants (e.g. English (Australia), Spanish (Mexico), Portuguese (Brazil)) are intentionally excluded — only the base/generic language is kept.
+- Script/writing-system variants are still included where they represent a distinct script, not a country (e.g. Chinese (Simplified), Chinese (Traditional), Bosnian (Cyrillic)).
+- Do not add Hebrew (`he` or `iw`) or Arabic (Saudi Arabia) (`ar-SA`) — these are intentionally excluded.
+- Ensure no duplicate language codes.
+- Ensure all listed language codes are preserved exactly.
+- RTL is enabled for Arabic (`ar`), Persian (`fa`), and Urdu (`ur`).
+
+## Update Note
+This list was filtered from the original 49-language source to keep only official/standard languages:
+- Removed repeated regional dialects of an already-covered language: Batak Karo (btx), Batak Simalungun (bts), Batak Toba (bbc), Cantonese (yue).
+- Removed country-specific duplicates of a base language already present: French (French) fr-FR, French (Canadian) fr-CA, Portuguese (Portugal) pt-PT, Portuguese (Brazil) pt-BR.
+- Script-writing-system variants of the same language are still kept (not dialects): Chinese (Simplified/Traditional), Malay (Jawi), Punjabi (Shahmukhi), Kurdish (Kurmanji/Sorani).
+- Total languages: 49.

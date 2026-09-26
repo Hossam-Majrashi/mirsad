@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.h.mirsad</id>
+  <name>Mirsad</name>
+  <name xml:lang="ar">مرصاد</name>
+  <summary>Multi-Engine File Security Scanner</summary>
+  <summary xml:lang="ar">فاحص أمان الملفات متعدد المحركات</summary>
+  <description>
+    <p>
+      Mirsad is an advanced defensive security utility developed by Juthoor Studio.
+      It submits files across multiple parallel security scanning engines (including VirusTotal,
+      MetaDefender Cloud, Hybrid Analysis, Intezer Analyze, Filescan.io, and Triage)
+      to detect malware, trojans, ransomware, and vulnerabilities.
+    </p>
+    <p>
+      Mirsad prioritizes user privacy with a Hash-First lookup mode, offline-first scan history,
+      and zero telemetry.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.h.mirsad.desktop</launchable>
+  <developer>
+    <name>Juthoor Studio (جذور استوديو)</name>
+  </developer>
+  <project_license>MIT</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <categories>
+    <category>Utility</category>
+    <category>Security</category>
+    <category>System</category>
+  </categories>
+  <keywords>
+    <keyword>security</keyword>
+    <keyword>scanner</keyword>
+    <keyword>antivirus</keyword>
+    <keyword>malware</keyword>
+    <keyword>virustotal</keyword>
+  </keywords>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.0" date="2026-09-23">
+      <description>
+        <p>Initial release of Mirsad Multi-Engine File Security Scanner.</p>
+      </description>
+    </release>
+  </releases>
+  <provides>
+    <binary>mirsad</binary>
+  </provides>
+</component>

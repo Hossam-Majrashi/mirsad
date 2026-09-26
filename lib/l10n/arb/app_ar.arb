@@ -1,0 +1,93 @@
+{
+  "@@locale": "ar",
+  "appName": "مرصاد",
+  "appSubtitle": "فاحص أمان الملفات متعدد المحركات",
+  "studioName": "جذور استوديو",
+  "appDescription": "مرصاد هو تطبيق دفاعي متقدم لفحص وتحليل الملفات عبر محركات أمنية متعددة وموازية للكشف عن التهديدات والبرمجيات الخبيثة.",
+  
+  "splashGetStarted": "ابدأ الفحص",
+  "btnNext": "التالي",
+  "btnSkip": "تخطي",
+  "btnBack": "رجوع",
+  "btnCancel": "إلغاء",
+  "btnConfirm": "تأكيد",
+  "btnDone": "تم",
+  "btnSave": "حفظ",
+  "btnProceed": "متابعة",
+  "btnRescan": "إعادة الفحص",
+
+  "selectLanguage": "اختر لغة التطبيق",
+  "searchLanguage": "بحث عن لغة...",
+  "selectTheme": "المظهر والسمة",
+  "chooseThemeSubtitle": "اختر السمة المفضلة لتجربة استخدام مريحة",
+  "themeDark": "الوضع الداكن",
+  "themeLight": "الوضع الفاتح",
+  "themeSystem": "حسب النظام",
+
+  "homeTitle": "مرصاد",
+  "newScan": "فحص جديد",
+  "settings": "الإعدادات",
+  "scanHistory": "سجل الفحوصات",
+  "noScanHistory": "لا توجد فحوصات سابقة",
+  "noScanHistorySubtitle": "اختر ملفاً لبدء الفحص عبر المحركات الأمنية المتقدمة",
+  "selectFile": "اختيار ملف",
+  "dragDropFile": "اسحب الملف وأفلته هنا، أو انقر للاختيار",
+  "computingHashes": "جاري حساب البصمات الرقمية (SHA-256 / SHA-1 / MD5)...",
+  "scanningEngines": "جاري الفحص عبر المحركات الأمنية...",
+  
+  "uploadConfirmTitle": "تأكيد رفع محتوى الملف",
+  "uploadConfirmDesc": "لم يتم العثور على تقرير سابق لبصمة هذا الملف. هل ترغب في رفع محتوى الملف إلى المحركات الخارجية لإجراء تحليل كامل؟\n\nتنويه: عند الرفع سيصبح محتوى الملف مرئياً لمزودي الخدمة الخارجيين المحددين.",
+  "hashOnlyMode": "فحص بالبصمة فقط (وضع الخصوصية المشدد)",
+  "fullUploadMode": "رفع الملف والفحص العميق",
+
+  "summaryTitle": "ملخص الفحص",
+  "fileName": "اسم الملف",
+  "fileSize": "حجم الملف",
+  "hashSha256": "بصمة SHA-256",
+  "hashSha1": "بصمة SHA-1",
+  "hashMd5": "بصمة MD5",
+  "aggregatedVerdict": "النتيجة العامة",
+  "flaggedCount": "{flagged} من أصل {total} محركات رصدت تهديداً في هذا الملف",
+  "@flaggedCount": {
+    "placeholders": {
+      "flagged": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "verdictClean": "سليم",
+  "verdictSuspicious": "مشبوه",
+  "verdictMalicious": "خبيث",
+  "verdictUnknown": "غير معروف",
+  "verdictError": "خطأ",
+
+  "statusQueued": "قيد الانتظار",
+  "statusScanning": "جاري الفحص...",
+  "statusCompleted": "مكتمل",
+  "statusFailed": "تعذر الفحص",
+
+  "viewFullReport": "عرض التقرير الكامل في المتصفح",
+  "engineFindings": "تفاصيل نتائج المحركات",
+  "engineName": "المحرك",
+  "engineCategory": "التصنيف",
+  "engineResult": "النتيجة",
+  "fileSizeExceeded": "حجم الملف يتجاوز الحد المسموح به لهذا المزود",
+  "shareReport": "مشاركة التقرير",
+
+  "settingsProviders": "المحركات الأمنية",
+  "settingsPrivacy": "إعدادات الخصوصية",
+  "hashFirstTitle": "البصمة أولاً (Hash-First)",
+  "hashFirstDesc": "الاستعلام بالبصمة الرقمية أولاً وعدم رفع الملف إلا بعد التأكيد",
+  "clearHistory": "مسح سجل الفحوصات",
+  "clearHistoryConfirm": "هل أنت متأكد من مسح جميع سجلات الفحوصات السابقة؟",
+  "historyCleared": "تم مسح سجل الفحوصات بنجاح",
+  
+  "devSectionTitle": "معلومات المطور",
+  "email": "البريد الإلكتروني",
+  "website": "الموقع الإلكتروني",
+  "copiedToClipboard": "تم النسخ إلى الحافظة",
+  "copyHash": "نسخ",
+  "themeDarkSubtitle": "الخلفية #212327 • الأيقونات/الأزرار #232627",
+  "themeLightSubtitle": "الخلفية #EFEEF1 • الأيقونات/الأزرار #FEFEFE",
+  "themeSystemSubtitle": "مطابقة مظهر النظام"
+}

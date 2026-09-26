@@ -1,0 +1,93 @@
+{
+  "@@locale": "en",
+  "appName": "Mirsad",
+  "appSubtitle": "Multi-Engine File Security Scanner",
+  "studioName": "Juthoor Studio",
+  "appDescription": "Mirsad is an advanced defensive security platform for scanning and analyzing files across multiple parallel security engines to detect malware and threats.",
+
+  "splashGetStarted": "Start Scanning",
+  "btnNext": "Next",
+  "btnSkip": "Skip",
+  "btnBack": "Back",
+  "btnCancel": "Cancel",
+  "btnConfirm": "Confirm",
+  "btnDone": "Done",
+  "btnSave": "Save",
+  "btnProceed": "Proceed",
+  "btnRescan": "Rescan",
+
+  "selectLanguage": "Select Language",
+  "searchLanguage": "Search language...",
+  "selectTheme": "Theme & Appearance",
+  "chooseThemeSubtitle": "Choose your preferred theme for a comfortable experience",
+  "themeDark": "Dark Mode",
+  "themeLight": "Light Mode",
+  "themeSystem": "System Default",
+
+  "homeTitle": "Mirsad",
+  "newScan": "New Scan",
+  "settings": "Settings",
+  "scanHistory": "Scan History",
+  "noScanHistory": "No previous scans",
+  "noScanHistorySubtitle": "Choose a file to start scanning across advanced security engines",
+  "selectFile": "Choose File",
+  "dragDropFile": "Drag and drop a file here, or click to browse",
+  "computingHashes": "Computing cryptographic hashes (SHA-256 / SHA-1 / MD5)...",
+  "scanningEngines": "Scanning across security engines...",
+
+  "uploadConfirmTitle": "Confirm File Upload",
+  "uploadConfirmDesc": "No prior report was found for this file's hash. Would you like to upload the file content to third-party engines for deep analysis?\n\nNotice: Uploading makes the file visible to the selected external service providers.",
+  "hashOnlyMode": "Hash-only lookup (Strict Privacy Mode)",
+  "fullUploadMode": "Upload File & Deep Scan",
+
+  "summaryTitle": "Scan Summary",
+  "fileName": "File Name",
+  "fileSize": "File Size",
+  "hashSha256": "SHA-256 Hash",
+  "hashSha1": "SHA-1 Hash",
+  "hashMd5": "MD5 Hash",
+  "aggregatedVerdict": "Aggregated Verdict",
+  "flaggedCount": "{flagged} of {total} providers flagged this file",
+  "@flaggedCount": {
+    "placeholders": {
+      "flagged": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+
+  "verdictClean": "Clean",
+  "verdictSuspicious": "Suspicious",
+  "verdictMalicious": "Malicious",
+  "verdictUnknown": "Unknown",
+  "verdictError": "Error",
+
+  "statusQueued": "Queued",
+  "statusScanning": "Scanning...",
+  "statusCompleted": "Completed",
+  "statusFailed": "Failed",
+
+  "viewFullReport": "View Full Report in Browser",
+  "engineFindings": "Engine Findings Detail",
+  "engineName": "Engine",
+  "engineCategory": "Category",
+  "engineResult": "Result",
+  "fileSizeExceeded": "File size exceeds provider limit",
+  "shareReport": "Share Report",
+
+  "settingsProviders": "Security Providers",
+  "settingsPrivacy": "Privacy Settings",
+  "hashFirstTitle": "Hash-First Mode",
+  "hashFirstDesc": "Query hash before requesting file upload",
+  "clearHistory": "Clear Scan History",
+  "clearHistoryConfirm": "Are you sure you want to clear all past scan history?",
+  "historyCleared": "Scan history cleared successfully",
+
+  "devSectionTitle": "Developer Info",
+  "email": "Email",
+  "website": "Website",
+  "copiedToClipboard": "Copied to clipboard",
+  "copyHash": "Copy",
+  "themeDarkSubtitle": "Background #212327 • Icons/Buttons #232627",
+  "themeLightSubtitle": "Background #EFEEF1 • Icons/Buttons #FEFEFE",
+  "themeSystemSubtitle": "Match system appearance"
+}

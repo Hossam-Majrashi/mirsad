@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Nautilus / Nemo / Caja script for Mirsad File Security Scanner
+for target in "$@"; do
+    if [ -n "$target" ]; then
+        mirsad "$target" &
+    fi
+done

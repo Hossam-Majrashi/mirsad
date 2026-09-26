@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\ScanWithMirsad]
+@="Scan with Mirsad"
+"Icon"="\"%LOCALAPPDATA%\\Programs\\Mirsad\\mirsad.exe\",0"
+
+[HKEY_CLASSES_ROOT\*\shell\ScanWithMirsad\command]
+@="\"%LOCALAPPDATA%\\Programs\\Mirsad\\mirsad.exe\" \"%1\""

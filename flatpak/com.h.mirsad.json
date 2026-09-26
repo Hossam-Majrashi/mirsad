@@ -1,0 +1,33 @@
+{
+  "app-id": "com.h.mirsad",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "mirsad",
+  "separate-locales": false,
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=x11",
+    "--filesystem=home",
+    "--filesystem=host",
+    "--device=dri",
+    "--talk-name=org.freedesktop.Notifications"
+  ],
+  "modules": [
+    {
+      "name": "mirsad",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/bin /app/lib/mirsad /app/share/applications /app/share/icons/hicolor/256x256/apps /app/share/metainfo",
+        "cp -r * /app/lib/mirsad/",
+        "ln -s /app/lib/mirsad/mirsad /app/bin/mirsad",
+        "install -D -m 644 com.h.mirsad.desktop /app/share/applications/com.h.mirsad.desktop",
+        "install -D -m 644 com.h.mirsad.png /app/share/icons/hicolor/256x256/apps/com.h.mirsad.png",
+        "install -D -m 644 com.h.mirsad.metainfo.xml /app/share/metainfo/com.h.mirsad.metainfo.xml"
+      ]
+    }
+  ]
+}

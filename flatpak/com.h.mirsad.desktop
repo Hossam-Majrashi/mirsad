@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Mirsad
+Name[ar]=مرصاد
+GenericName=File Security Scanner
+GenericName[ar]=فاحص أمان الملفات
+Comment=Multi-Engine File Security Scanner
+Comment[ar]=فاحص أمان الملفات متعدد المحركات للكشف عن التهديدات والبرمجيات الخبيثة
+Exec=mirsad %U
+Icon=com.h.mirsad
+Categories=Utility;Security;System;
+Terminal=false
+StartupNotify=true
+StartupWMClass=mirsad
+MimeType=application/octet-stream;
+Keywords=security;scanner;antivirus;malware;virustotal;hash;
+Actions=ScanFile;
+
+[Desktop Action ScanFile]
+Name=Scan with Mirsad
+Name[ar]=فحص بواسطة مرصاد
+Exec=mirsad %f
+Icon=com.h.mirsad

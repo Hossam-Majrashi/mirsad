@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=ScanWithMirsad;
+X-KDE-Priority=TopLevel
+
+[Desktop Action ScanWithMirsad]
+Name=Scan with Mirsad
+Name[ar]=فحص بواسطة مرصاد
+Icon=com.h.mirsad
+Exec=mirsad %f
